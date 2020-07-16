@@ -1,0 +1,137 @@
+[2020-07-04 15:43:34] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (TypeError(code: 0): Argument 1 passed to Monolog\\Handler\\SlackWebhookHandler::__construct() must be of the type string, null given, called in D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php on line 304 at D:\\xampp\\htdocs\\hungshop\\vendor\\monolog\\monolog\\src\\Monolog\\Handler\\SlackWebhookHandler.php:51)
+[stacktrace]
+#0 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(304): Monolog\\Handler\\SlackWebhookHandler->__construct(NULL, NULL, 'S-Cart Log', true, ':boom:', false, true, 100, true, Array)
+#1 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(202): Illuminate\\Log\\LogManager->createSlackDriver(Array)
+#2 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(118): Illuminate\\Log\\LogManager->resolve('slack')
+#3 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(98): Illuminate\\Log\\LogManager->get('slack')
+#4 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(87): Illuminate\\Log\\LogManager->driver('slack')
+#5 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Log\\LogManager->channel('slack')
+#6 D:\\xampp\\htdocs\\hungshop\\app\\Library\\Helpers\\functions.php(272): Illuminate\\Support\\Facades\\Facade::__callStatic('channel', Array)
+#7 D:\\xampp\\htdocs\\hungshop\\app\\Exceptions\\Handler.php(42): sc_report('2020-07-04 15:4...')
+#8 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(49): App\\Exceptions\\Handler->report(Object(Illuminate\\Database\\QueryException))
+#9 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(130): Illuminate\\Routing\\Pipeline->handleException(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#10 D:\\xampp\\htdocs\\hungshop\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#12 D:\\xampp\\htdocs\\hungshop\\vendor\\spatie\\laravel-pjax\\src\\Middleware\\FilterIfPjax.php(18): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Spatie\\Pjax\\Middleware\\FilterIfPjax->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 D:\\xampp\\htdocs\\hungshop\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(63): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(140): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#26 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(109): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#27 D:\\xampp\\htdocs\\hungshop\\public\\install.php(13): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#28 {main}
+"} 
+[2020-07-04 15:43:34] laravel.ERROR: 2020-07-04 15:43:33:
+```SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `shop_language` where `status` = 1)```
+*File* `D:\xampp\htdocs\hungshop\vendor\laravel\framework\src\Illuminate\Database\Connection.php`, *Line:* 671, *Code:* 1045
+
+  
+[2020-07-13 16:49:55] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (TypeError(code: 0): Argument 1 passed to Monolog\\Handler\\SlackWebhookHandler::__construct() must be of the type string, null given, called in D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php on line 304 at D:\\xampp\\htdocs\\hungshop\\vendor\\monolog\\monolog\\src\\Monolog\\Handler\\SlackWebhookHandler.php:51)
+[stacktrace]
+#0 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(304): Monolog\\Handler\\SlackWebhookHandler->__construct(NULL, NULL, 'S-Cart Log', true, ':boom:', false, true, 100, true, Array)
+#1 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(202): Illuminate\\Log\\LogManager->createSlackDriver(Array)
+#2 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(118): Illuminate\\Log\\LogManager->resolve('slack')
+#3 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(98): Illuminate\\Log\\LogManager->get('slack')
+#4 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(87): Illuminate\\Log\\LogManager->driver('slack')
+#5 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Log\\LogManager->channel('slack')
+#6 D:\\xampp\\htdocs\\hungshop\\app\\Library\\Helpers\\functions.php(272): Illuminate\\Support\\Facades\\Facade::__callStatic('channel', Array)
+#7 D:\\xampp\\htdocs\\hungshop\\app\\Exceptions\\Handler.php(42): sc_report('2020-07-13 16:4...')
+#8 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(49): App\\Exceptions\\Handler->report(Object(RuntimeException))
+#9 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(172): Illuminate\\Routing\\Pipeline->handleException(Object(Illuminate\\Http\\Request), Object(RuntimeException))
+#10 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(687): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#12 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(662): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#13 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(628): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#14 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(617): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#15 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(165): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#16 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#17 D:\\xampp\\htdocs\\hungshop\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 D:\\xampp\\htdocs\\hungshop\\vendor\\spatie\\laravel-pjax\\src\\Middleware\\FilterIfPjax.php(18): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Spatie\\Pjax\\Middleware\\FilterIfPjax->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 D:\\xampp\\htdocs\\hungshop\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(63): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(140): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#33 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(109): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#34 D:\\xampp\\htdocs\\hungshop\\public\\index.php(62): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#35 {main}
+"} 
+[2020-07-13 16:49:55] laravel.ERROR: 2020-07-13 16:49:55:
+```No application encryption key has been specified.```
+*File* `D:\xampp\htdocs\hungshop\vendor\laravel\framework\src\Illuminate\Encryption\EncryptionServiceProvider.php`, *Line:* 80, *Code:* 0
+
+  
+[2020-07-13 16:49:55] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (TypeError(code: 0): Argument 1 passed to Monolog\\Handler\\SlackWebhookHandler::__construct() must be of the type string, null given, called in D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php on line 304 at D:\\xampp\\htdocs\\hungshop\\vendor\\monolog\\monolog\\src\\Monolog\\Handler\\SlackWebhookHandler.php:51)
+[stacktrace]
+#0 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(304): Monolog\\Handler\\SlackWebhookHandler->__construct(NULL, NULL, 'S-Cart Log', true, ':boom:', false, true, 100, true, Array)
+#1 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(202): Illuminate\\Log\\LogManager->createSlackDriver(Array)
+#2 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(118): Illuminate\\Log\\LogManager->resolve('slack')
+#3 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(98): Illuminate\\Log\\LogManager->get('slack')
+#4 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(87): Illuminate\\Log\\LogManager->driver('slack')
+#5 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Log\\LogManager->channel('slack')
+#6 D:\\xampp\\htdocs\\hungshop\\app\\Library\\Helpers\\functions.php(272): Illuminate\\Support\\Facades\\Facade::__callStatic('channel', Array)
+#7 D:\\xampp\\htdocs\\hungshop\\app\\Exceptions\\Handler.php(42): sc_report('2020-07-13 16:4...')
+#8 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(88): App\\Exceptions\\Handler->report(Object(RuntimeException))
+#9 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleException(Object(RuntimeException))
+#10 {main}
+"} 
+[2020-07-13 16:49:55] laravel.ERROR: 2020-07-13 16:49:55:
+```No application encryption key has been specified.```
+*File* `D:\xampp\htdocs\hungshop\vendor\laravel\framework\src\Illuminate\Encryption\EncryptionServiceProvider.php`, *Line:* 80, *Code:* 0
+
+  
+[2020-07-16 11:00:34] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (TypeError(code: 0): Argument 1 passed to Monolog\\Handler\\SlackWebhookHandler::__construct() must be of the type string, null given, called in D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php on line 304 at D:\\xampp\\htdocs\\hungshop\\vendor\\monolog\\monolog\\src\\Monolog\\Handler\\SlackWebhookHandler.php:51)
+[stacktrace]
+#0 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(304): Monolog\\Handler\\SlackWebhookHandler->__construct(NULL, NULL, 'S-Cart Log', true, ':boom:', false, true, 100, true, Array)
+#1 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(202): Illuminate\\Log\\LogManager->createSlackDriver(Array)
+#2 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(118): Illuminate\\Log\\LogManager->resolve('slack')
+#3 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(98): Illuminate\\Log\\LogManager->get('slack')
+#4 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(87): Illuminate\\Log\\LogManager->driver('slack')
+#5 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Log\\LogManager->channel('slack')
+#6 D:\\xampp\\htdocs\\hungshop\\app\\Library\\Helpers\\functions.php(272): Illuminate\\Support\\Facades\\Facade::__callStatic('channel', Array)
+#7 D:\\xampp\\htdocs\\hungshop\\app\\Exceptions\\Handler.php(42): sc_report('2020-07-16 11:0...')
+#8 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(49): App\\Exceptions\\Handler->report(Object(Illuminate\\Database\\QueryException))
+#9 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(130): Illuminate\\Routing\\Pipeline->handleException(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#10 D:\\xampp\\htdocs\\hungshop\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(65): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#12 D:\\xampp\\htdocs\\hungshop\\vendor\\spatie\\laravel-pjax\\src\\Middleware\\FilterIfPjax.php(18): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Spatie\\Pjax\\Middleware\\FilterIfPjax->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 D:\\xampp\\htdocs\\hungshop\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(63): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(140): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#26 D:\\xampp\\htdocs\\hungshop\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(109): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#27 D:\\xampp\\htdocs\\hungshop\\public\\index.php(62): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#28 {main}
+"} 
+[2020-07-16 11:00:34] laravel.ERROR: 2020-07-16 11:00:34:
+```SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from `shop_language` where `status` = 1)```
+*File* `D:\xampp\htdocs\hungshop\vendor\laravel\framework\src\Illuminate\Database\Connection.php`, *Line:* 671, *Code:* 1045
+
+  
