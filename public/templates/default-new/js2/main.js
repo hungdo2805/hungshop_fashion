@@ -152,7 +152,7 @@
     var timerdate = mm + '/' + dd + '/' + yyyy;
     // For demo preview end
 
-    console.log(timerdate);
+    //console.log(timerdate);
     
 
     // Use this for real timer date
